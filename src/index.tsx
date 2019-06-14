@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const rootElement = document.getElementById("root");
 
 // import OpenSidepanel from "./Scene/SidepanelAPI/OpenSidepanel";
 // import HideSidepanel from "./Scene/SidepanelAPI/HideSidepanel";
@@ -12,6 +11,8 @@ const rootElement = document.getElementById("root");
 // import CloseMayer from "./Scene/MayersAPI/CloseMayer";
 // import CloseMayerFromButtonsConfig from "./Scene/MayersAPI/CloseMayerFromButtonsConfig";
 // import OpenMayer from "./Scene/MayersAPI/OpenMayer";
+
+const rootElement = document.getElementById("root");
 // ReactDOM.render(<OpenSidepanel />, rootElement);
 // ReactDOM.render(<HideSidepanel />, rootElement);
 // ReactDOM.render(<GoToAnotherView />, rootElement);
@@ -22,5 +23,4 @@ const rootElement = document.getElementById("root");
 // ReactDOM.render(<CloseMayer />, rootElement);
 // ReactDOM.render(<CloseMayerFromButtonsConfig />, rootElement);
 // ReactDOM.render(<OpenMayer />, rootElement);
-
 ReactDOM.render(<div>Airr React Components API</div>, rootElement);

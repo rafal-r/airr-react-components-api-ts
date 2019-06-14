@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import {
     Scene,
     Sidepanel,
-    SceneProps,
     TSValidateViewsConfig,
     SidepanelProps,
     TSValidateSidepanelConfig,
@@ -36,6 +35,15 @@ class CustomSidepanel extends Sidepanel<CustomSidepanelProps> {
     }
 }
 export default class SimpleScene extends Scene {
+    viewsConfig = TSValidateViewsConfig({
+        [SimpleViewName]: {
+            type: SimpleView,
+            props: {
+                name: SimpleViewName
+            }
+        }
+    });
+
     state: SceneState = {
         ...this.state,
         activeViewName: SimpleViewName,
@@ -52,15 +60,6 @@ export default class SimpleScene extends Scene {
         }),
         views: [this.getFreshViewConfig(SimpleViewName)]
     };
-
-    viewsConfig = TSValidateViewsConfig({
-        [SimpleViewName]: {
-            type: SimpleView,
-            props: {
-                name: SimpleViewName
-            }
-        }
-    });
 }
 
 const rootElement = document.getElementById("root");

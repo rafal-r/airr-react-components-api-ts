@@ -1,1 +1,1 @@
-# View on [Codesandbox](https://codesandbox.io/s/github/rafal-r/airr-react-component-api-ts)
+# View on [Codesandbox](https://codesandbox.io/s/github/rafal-r/airr-react-components-api-ts)

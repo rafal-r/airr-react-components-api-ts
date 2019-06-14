@@ -10,12 +10,6 @@ import "airr-react/dist/airr-react.css";
 import "../../css/common.css";
 
 export default class SimpleScene extends Scene {
-    state: SceneState = {
-        ...this.state,
-        activeViewName: "view-1",
-        views: [this.getFreshViewConfig("view-1")]
-    };
-
     pushNewViewFromViewsConfig = (e: SyntheticEvent<HTMLElement>) => {
         this.changeView(CommonViewNameTpl, {
             children: (
@@ -55,6 +49,12 @@ export default class SimpleScene extends Scene {
             }
         }
     });
+
+    state: SceneState = {
+        ...this.state,
+        activeViewName: "view-1",
+        views: [this.getFreshViewConfig("view-1")]
+    };
 }
 
 const rootElement = document.getElementById("root");

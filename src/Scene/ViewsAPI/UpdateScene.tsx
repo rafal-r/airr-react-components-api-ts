@@ -7,12 +7,6 @@ import "airr-react/dist/airr-react.css";
 import "../../css/common.css";
 
 export default class SimpleScene extends Scene {
-    state: SceneState = {
-        ...this.state,
-        activeViewName: HelloWorldViewName,
-        views: [this.getFreshViewConfig(HelloWorldViewName)]
-    };
-
     updateScene = (e: SyntheticEvent<HTMLElement>) => {
         this.changeView(
             HelloWorldViewName,
@@ -47,6 +41,12 @@ export default class SimpleScene extends Scene {
             }
         }
     });
+
+    state: SceneState = {
+        ...this.state,
+        activeViewName: HelloWorldViewName,
+        views: [this.getFreshViewConfig(HelloWorldViewName)]
+    };
 }
 
 const rootElement = document.getElementById("root");
